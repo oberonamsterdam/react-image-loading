@@ -1,0 +1,36 @@
+{
+  "name": "react-image-loading",
+  "version": "0.1.0",
+  "description": "Load an image in React with loading placeholder and fallback",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf lib/ && npx tsc --project . --declaration",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "load",
+    "image",
+    "placeholder",
+    "loader",
+    "spinner",
+    "fallback",
+    "progressive",
+    "async"
+  ],
+  "author": "Richard van Willegen",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.3.17",
+    "react": "^16.4.1",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.10.0",
+    "tslint-config-oberon": "^1.0.4",
+    "typescript": "^2.9.2"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0-0 || ^16.0.0-0"
+  }
+}
