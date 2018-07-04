@@ -10,12 +10,14 @@ const ImageLoad = (props: ImgHTMLAttributes<HTMLImageElement>) => (
             <React.Fragment>
                 {status === 'error' || (!props.src && !props.srcSet)
                     ? <Fallback/>
-                    : <img ref={ref} {...props} />
+                    : <React.Fragment>
+                        <img ref={ref} {...props} />
+                        <LoadingPlaceholder
+                            style={{ transition: 'opacity 0.5s', opacity: status === 'loading' ? 1 : 0 }}
+                            animate={status === 'loading'}
+                        />
+                    </React.Fragment>
                 }
-                <LoadingPlaceholder
-                    style={{ transition: 'opacity 0.5s', opacity: status === 'loading' ? 1 : 0 }}
-                    animate={status === 'loading'}
-                />
             </React.Fragment>
         )}
     </ImageLoading>

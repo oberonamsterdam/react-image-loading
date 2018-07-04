@@ -1,6 +1,6 @@
 {
   "name": "react-image-loading",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Load an image in React with loading placeholder and fallback",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -23,8 +23,8 @@
   "author": "Richard van Willegen",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/oberonamsterdam/react-image-loading"
+    "type": "git",
+    "url": "https://github.com/oberonamsterdam/react-image-loading"
   },
   "devDependencies": {
     "@types/react": "^16.3.17",
