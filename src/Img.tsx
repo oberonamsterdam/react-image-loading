@@ -8,7 +8,7 @@ const ImageLoad = (props: ImgHTMLAttributes<HTMLImageElement>) => (
     <ImageLoading>
         {(ref, status) => (
             <React.Fragment>
-                {status === 'error' || (!props.src && !props.srcSet)
+                {status === 'error' || !props.src
                     ? <Fallback/>
                     : <React.Fragment>
                         <img ref={ref} {...props} />
