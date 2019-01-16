@@ -26,6 +26,20 @@ class ImageLoading extends React.Component<ImageLoadingProps, State> {
         return this.props.children(this.ref, loadState);
     }
 
+    public componentWillUnmount() {
+        if (this.state.loadState === 'loading') {
+            this.cancelImageLoad();
+        }
+    }
+
+    private cancelImageLoad() {
+        if (this.state.imgEl) {
+            this.state.imgEl.onload = null;
+            this.state.imgEl.onerror = null;
+            this.state.imgEl.src = '';
+        }
+    }
+
     private ref: Ref = imageElement => {
         if (imageElement) {
             imageElement.onload = () => this.onLoad(imageElement);

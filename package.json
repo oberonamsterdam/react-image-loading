@@ -1,6 +1,6 @@
 {
   "name": "react-image-loading",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Load an image in React with loading placeholder and fallback",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
