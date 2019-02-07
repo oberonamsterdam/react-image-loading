@@ -42,16 +42,19 @@ class ImageLoading extends React.Component<ImageLoadingProps, State> {
 
     private ref: Ref = imageElement => {
         if (imageElement) {
-            imageElement.onload = () => this.onLoad(imageElement);
-            imageElement.onerror = this.onError;
-
-            if (imageElement.complete) {
-                if (imageElement.naturalWidth) {
-                    this.onLoad(imageElement);
+            // The timeout fixes an issue with cached images in firefox where the naturalWidth is set one frame later
+            setTimeout(() => {
+                if (imageElement.complete) {
+                    if (imageElement.naturalWidth) {
+                        this.onLoad(imageElement);
+                    } else {
+                        this.onError();
+                    }
                 } else {
-                    this.onError();
+                    imageElement.onload = () => this.onLoad(imageElement);
+                    imageElement.onerror = this.onError;
                 }
-            }
+            });
         }
 
         this.setState({ imgEl: imageElement });
