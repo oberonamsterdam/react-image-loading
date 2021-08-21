@@ -1,5 +1,4 @@
 import * as React from 'react';
-declare var process: any;
 
 export type LoadState = 'loading' | 'complete' | 'error';
 export type Ref = (imageElement: HTMLImageElement | null) => void;
