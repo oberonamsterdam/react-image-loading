@@ -1,6 +1,6 @@
 {
-  "name": "react-image-loading",
-  "version": "0.2.2",
+  "name": "@jtalk/react-image-loading",
+  "version": "0.3.0",
   "description": "Load an image in React with loading placeholder and fallback",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -25,7 +25,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oberonamsterdam/react-image-loading"
+    "url": "https://github.com/Jtalk/react-image-loading"
   },
   "devDependencies": {
     "@types/node": "^16.7.1",
